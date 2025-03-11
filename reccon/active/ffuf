@@ -1,0 +1,24 @@
+######  Directory Discorvery ######
+
+##### BASIC DISCORVERY ######
+
+ffuf -u domainname.com/FUZZ  -w <wordlist_path>
+
+###### RECOURSIVE DISCORVERY #######
+
+ffuf -u domainname.com/FUZZ -w <wordlist_path> -recursion / -recursion-depth -<desired_number>
+
+TIP: add the port number, TIP 2 a suitable wordlist would be raft-directories found at /usr/share/wordlist/seclists/Discovery/Web-Content/...
+
+
+###### SUB-DOMAIN #########
+
+ffuf -u http://FUZZ.domainname.com/ -w <wordlist_path>
+
+suitable wordlist location: /usr/share/seclists/Discorvery/DNS/...
+
+###### PARAMETER FUZZING #####
+
+ffuf -u http://domainname.com/DIR/DIR.php?FUZZ = key -w <wordlist_path>
+
+suitable wordlist location: .../Web-Content/burp-parameter-name.txt
