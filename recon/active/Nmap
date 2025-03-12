@@ -1,0 +1,7 @@
+Nmap is a common and popular scanning and enumeration tool, with different ways to utilize it, below are a few of some commands:
+
+nmap <IP> -F -->> Fast scan
+nmap <IP> -A -->> performs everything.
+nmap <IP> -T4 --> Increases the threads, which is the intensity, th lower the number the less intrusive it is, which can be useful when trying to scan while undetected.
+namp <IP> -Pn 
+nmap <IP> -Pc 
