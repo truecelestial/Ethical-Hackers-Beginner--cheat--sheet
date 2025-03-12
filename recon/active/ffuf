@@ -22,3 +22,11 @@ suitable wordlist location: /usr/share/seclists/Discorvery/DNS/...
 ffuf -u http://domainname.com/DIR/DIR.php?FUZZ = key -w <wordlist_path>
 
 suitable wordlist location: .../Web-Content/burp-parameter-name.txt
+
+Filter Options:
+
+-fs -->> Filter by Size.
+-fc -->> Filter by response code.
+-v -->> Display link.
+-ic -->> ignores comments that may be in the wordlist.
+
