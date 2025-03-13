@@ -1,4 +1,4 @@
-# Ethical-Hackers-Beginner--cheat--sheet
+# Ethical-Hackers-Beginner--cheat--sheet (Still under major Development..)
 <header>
 
 # Useful commands for Ethical-Hackers (Beginner focused)
