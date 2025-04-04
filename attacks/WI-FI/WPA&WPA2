@@ -8,7 +8,13 @@ Note: ALL ACTIONS MUST BE TAKEN IN ROOT OR USE SUDO AND WIFI ADAPTER MUST BE IN 
 airmon-ng
 
 airmon-ng start wlan0
+      OR
 
+ifconfig wlan0 down
+
+iwconfig wlan0 mode monitor
+
+ifconfig wlan0 up
 
 
 ###### RECONNAISANCE #######
