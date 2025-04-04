@@ -1,0 +1,9 @@
+###### CRUNCH #########
+
+crunch <min.char> <max.char> <characters_to_include_in_wordlist> -O <wordlist_desired_name>
+
+			alternatively
+crunch <min.char> <max.char> <characters_to_include_in_wordlist> -t <desired_arrangement_of_wordlist> -O <wordlist_desired_name>
+
+E.g crunch 4 5 568339 -t 5@@@9 -O /home/kali/tools/wordlist001
+ -->> creates every possible combination of charcters with 568339 will be created but they will start with 5 and end with 9.
