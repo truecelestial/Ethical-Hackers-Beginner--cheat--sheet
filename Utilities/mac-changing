@@ -1,0 +1,22 @@
+####### MANUAL-METHOD ######
+
+ip link show interface -->> Shows current mac address.
+
+ip link set dev interface down -->> Brings interface down
+	e.g ip link set dev wlan0 down
+
+ip link set dev interface address xx.xx.xx.xx.xx.xx.xx -->> assigning specified address
+
+########### AUTOMATIC #################
+
+macchanger -s interface -->> Checks current and permanent mac address
+
+macchnager -r interface -->> Changes it to a random address
+
+macchanger -e interface -->> preserves the vendor, bust changes the hosts address
+
+macchanger --mac=xx.xx.xx.xx.xx.xx interface
+
+macchanger -p interface -->> returns the interface to its original manufacturer.
+
+Note:These actions would require root priviledges.
