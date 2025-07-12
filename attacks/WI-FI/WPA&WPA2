@@ -19,7 +19,7 @@ ifconfig wlan0 up
 
 ###### RECONNAISANCE #######
 
-airodump wlan0
+airodump-ng wlan0
 
 TIP: The lower the power, the closer the wireless point
 
