@@ -1,0 +1,1 @@
+crackmapexec smb 192.168.29.0/24 -->> Scans the entire Subnet and windows with network discovery will be discorvered.
