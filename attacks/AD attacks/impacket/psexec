@@ -1,0 +1,1 @@
+impacket-psexec domain.local/<username>:<user-passwd>@<user-IP>
