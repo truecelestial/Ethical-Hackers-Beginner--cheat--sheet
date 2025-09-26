@@ -1,0 +1,1 @@
+xfreerdp3 /v:<Target IP> /u:<target user> /p:<target passwd> /cert:ignore /workarea /smart-sizing --> grants remote desktop access a kali inbuilt tool.
